@@ -24,17 +24,19 @@ switch ($action) {
  		//プロパィ
  		private $action='';
  		private $resource='';
+ 		private $viewOptions='';
 
  		public function index(){
- 			//モデルを呼び出す
- 			// $blog = new Blog();
- 			// $blog->index();
 
+
+ 		// foreach ($this->viweOptions as $viweOption) {
+ 			
+ 		// }
  		
  		///モデルを呼び出す
  		$blog = new Blog();
- 		$blog->index();
-
+ 		$this->viewOptions = $blog->index();
+ 		//アクション名を設定
  		$this->action ='index';
 
  		//ビューを呼び出す
