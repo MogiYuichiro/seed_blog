@@ -50,6 +50,9 @@ switch ($action) {
  	public function show($id){
  		$blog = new Blog();
  		$blog->show($id);
+ 		$this->viewOptions = $blog->show($id);
+ 		var_dump($this->viewOptions);
+
 
  		$this->action='show';
 
