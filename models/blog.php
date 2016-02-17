@@ -21,6 +21,12 @@
 			}
 			//取得結果を返す
 			return $rtn;
+
+			}
+
+			public function show(){
+				echo "taitoru";
+			
 		}
 	}
  ?>

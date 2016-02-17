@@ -12,6 +12,10 @@ switch ($action) {
 		$controller->index();
 		break;
 	
+	case'show':
+	 	$controller->show();
+	 	break;
+
 	default:
 		# code...
 		break;
@@ -42,6 +46,14 @@ switch ($action) {
  		//ビューを呼び出す
  		include('views/layout/application.php');
  		//require('views/blogs/index.php');
+ 	}
+ 	public function show(){
+ 		$blog = new Blog();
+ 		$blog->show();
+
+ 		$this->action='show';
+
+ 		include('views/layout/application.php');
  	}
  }
  ?>
