@@ -24,8 +24,19 @@
 
 			}
 
-			public function show(){
-				echo "taitoru";
+			public function show($id){
+
+				$spl = 'SELECT * FROM `blogs` WHERE `id`= '.$id;
+				$results = mysqli_query($this->dbconnect,$sql)or die(mysql_error($this->dbconnect));
+				$result = mysqli_fetch_assoc($results);
+				return $result;
+				var_dump($result);
+			// 	$rtn = array();
+			// while ($result = mysqli_fetch_assoc($results)) {
+			// 	$rtn[] = $result;
+			// }
+			// //取得結果を返す
+			// return $rtn;
 			
 		}
 	}

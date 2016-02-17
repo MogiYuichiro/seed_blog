@@ -17,4 +17,5 @@ if (isset($params[2])) {
 //➂コントローラの呼び出し
 require('controllers/'.$resource.'_controller.php');
 
+
 ?>
