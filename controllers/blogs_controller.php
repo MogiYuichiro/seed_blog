@@ -80,9 +80,9 @@ switch ($action) {
  		///モデルを呼び出す
  		$blog = new Blog();
  		$blog->create($post);
- 		var_dump($post);
 
- 		include('views/layout/application.php');
+ 		// indexへ遷移
+ 		header('Location: /seed_blog/blogs/index/');
  	}
  }
  ?>

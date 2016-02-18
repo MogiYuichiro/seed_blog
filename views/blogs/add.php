@@ -16,7 +16,7 @@
               <p>
                 <a href="/seed_blog/blogs/index" class="btn btn-default">戻る</a>&nbsp;&nbsp;
                 <!-- <a href="/seed_blog/blogs/index" class="btn btn-success">投稿する</a> -->
-                <input type"submit" class="btn btn-success" value="投稿する">
+                <input type="submit" class="btn btn-success" value="投稿する">
               </p>
             </div>
           </form>
