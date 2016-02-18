@@ -31,13 +31,11 @@
 				$result = mysqli_fetch_assoc($results);
 				return $result;
 
-			// 	$rtn = array();
-			// while ($result = mysqli_fetch_assoc($results)) {
-			// 	$rtn[] = $result;
-			// }
-			// //取得結果を返す
-			// return $rtn;
-			
 		}
+		public function create($post){
+			var_dump($post);
+
+		}
+
 	}
  ?>

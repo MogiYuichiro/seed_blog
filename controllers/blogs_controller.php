@@ -20,6 +20,10 @@ switch ($action) {
 	 	$controller->add();
 	 	break;
 
+	 	case 'create':
+	 	$controller->create($post);
+	 	break;
+
 	default:
 		# code...
 		break;
@@ -70,7 +74,15 @@ switch ($action) {
 
  		include('views/layout/application.php');
 
+ 	}
 
+ 	public function create($post){
+ 		///モデルを呼び出す
+ 		$blog = new Blog();
+ 		$blog->create($post);
+ 		var_dump($post);
+
+ 		include('views/layout/application.php');
  	}
  }
  ?>

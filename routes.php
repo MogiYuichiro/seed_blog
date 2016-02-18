@@ -7,6 +7,7 @@ $params =  explode('/',$_GET['url'] );
 $resource = $params[0];
 $action = $params[1];
 $id = 0;
+$post = array();
 
 
 //idがあった場合は、idを取得する
@@ -14,8 +15,15 @@ if (isset($params[2])) {
 	$id  = $params[2];
 }
 
+// idがあったら場合、idも取得する
+if (isset($_POST)&& !empty($_POST)) {
+	$post = $_POST;
+	
+}
+
 //➂コントローラの呼び出し
 require('controllers/'.$resource.'_controller.php');
+
 
 
 ?>
