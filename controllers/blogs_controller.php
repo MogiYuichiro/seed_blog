@@ -16,6 +16,10 @@ switch ($action) {
 	 	$controller->show($id);
 	 	break;
 
+	 case 'add':
+	 	$controller->add();
+	 	break;
+
 	default:
 		# code...
 		break;
@@ -29,6 +33,7 @@ switch ($action) {
  		private $action='';
  		private $resource='';
  		private $viewOptions='';
+
 
  		public function index(){
 
@@ -49,14 +54,23 @@ switch ($action) {
  	}
  	public function show($id){
  		$blog = new Blog();
- 		$blog->show($id);
+ 		// $blog->show($id);
  		$this->viewOptions = $blog->show($id);
- 		var_dump($this->viewOptions);
 
 
  		$this->action='show';
 
  		include('views/layout/application.php');
+ 	}
+
+ 	public function add(){
+ 		// $blog = new Blog();
+ 		// $blog->add();
+ 		$this->action='add';
+
+ 		include('views/layout/application.php');
+
+
  	}
  }
  ?>
