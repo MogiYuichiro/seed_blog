@@ -92,7 +92,7 @@ switch ($action) {
  	public function edit($id){
 
  		$blog = new Blog();
- 		$blog->edit($id);
+ 		// $blog->edit($id);
  		$this->viewOptions = $blog->edit($id);
  		$this->action='edit';
  		include('views/layout/application.php');

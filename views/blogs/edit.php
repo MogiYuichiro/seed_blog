@@ -9,7 +9,7 @@
             <div class="form-group">
               <label for="name" class="col-md-3 control-label">本文</label>
               <div class="col-md-9">
-                <textarea name="body" class="form-control" cols="30" rows="5"><?php $this->viewOptions['body']; ?></textarea>
+                <textarea name="body" class="form-control" cols="30" rows="5"><?php echo $this->viewOptions['body']; ?></textarea>
               </div>
             </div>
             <div class="form-group pull-right">
