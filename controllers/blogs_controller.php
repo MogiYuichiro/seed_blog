@@ -20,8 +20,12 @@ switch ($action) {
 	 	$controller->add();
 	 	break;
 
-	 	case 'create':
+	 case 'create':
 	 	$controller->create($post);
+	 	break;
+
+	case 'edit':
+	 	$controller->edit($id);
 	 	break;
 
 	default:
@@ -83,6 +87,16 @@ switch ($action) {
 
  		// indexへ遷移
  		header('Location: /seed_blog/blogs/index/');
+ 	}
+
+ 	public function edit($id){
+
+ 		$blog = new Blog();
+ 		$blog->edit($id);
+ 		$this->viewOptions = $blog->edit($id);
+ 		$this->action='edit';
+ 		include('views/layout/application.php');
+
  	}
  }
  ?>
