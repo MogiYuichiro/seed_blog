@@ -1,5 +1,5 @@
         <div class="msg">
-          <form method="post" action="" class="form-horizontal" role="form">
+          <form method="post" action="/seed_blog/blogs/updete/<?php echo $this->viewOptions['id']; ?>" class="form-horizontal" role="form">
             <div class="form-group">
               <label for="name" class="col-md-3 control-label">タイトル</label>
               <div class="col-md-9">
@@ -15,7 +15,8 @@
             <div class="form-group pull-right">
               <p>
                 <a href="/seed_blog/blogs/index" class="btn btn-default">戻る</a>&nbsp;&nbsp;
-                <a href="/seed_blog/blogs/index" class="btn btn-danger">更新する</a>
+                <!-- <a href="/seed_blog/blogs/index" class="btn btn-danger">更新する</a> -->
+                <input type="submit" class="btn btn-danger" value="更新する">
               </p>
             </div>
           </form>

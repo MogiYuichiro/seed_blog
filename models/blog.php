@@ -52,5 +52,20 @@
 
 		}
 
+		public function update($id,$post){
+			$sql = sprintf('UPDATE `blogs` SET `title`="%s",`body`="%s" WHERE `id` = %d',
+ 				mysqli_real_escape_string($this->dbconnect, $post['title']),
+ 				mysqli_real_escape_string($this->dbconnect, $post['body']),
+ 				$id
+ 			);
+ 
+ 			mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
+		}
+
+		public function delete($id){
+ 			$sql = 'UPDATE `blogs` SET `delete_flag`=1 WHERE `id`=' . $id;
+ 			mysqli_query($this->dbconnect, $sql) or die(mysqli_error($this->dbconnect));
+ 		}
+
 	}
  ?>

@@ -28,6 +28,14 @@ switch ($action) {
 	 	$controller->edit($id);
 	 	break;
 
+	case 'update':
+	 	$controller->update($id,$post);
+	 	break;
+
+	case 'delete':
+ 		$controller->delete($id);
+ 		break;
+
 	default:
 		# code...
 		break;
@@ -98,5 +106,22 @@ switch ($action) {
  		include('views/layout/application.php');
 
  	}
+ 	public function update($id, $post){
+ 			$blog = new Blog();
+ 			$blog->update($id, $post);
+ 
+ 			// indexへ遷移
+ 			header('Location: /seed_blog/blogs/index/');
+
+ 	}
+
+ 	public function delete($id){
+ 			$blog = new Blog();
+ 			$blog->delete($id);
+
+ 			// indexへ遷移
+ 			header('Location: /seed_blog/blogs/index/');
+ 		}
+
  }
  ?>
