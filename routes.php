@@ -18,7 +18,6 @@ if (isset($params[2])) {
 // idがあったら場合、idも取得する
 if (isset($_POST)&& !empty($_POST)) {
 	$post = $_POST;
-	
 }
 
 //➂コントローラの呼び出し
